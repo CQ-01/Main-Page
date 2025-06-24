@@ -63,10 +63,16 @@
     }
   </style>
   <script>
-    function toggleSection(id) {
-      const section = document.getElementById(id);
-      section.style.display = (section.style.display === "none") ? "block" : "none";
+  function toggleSection(id) {
+    const section = document.getElementById(id);
+    if (section.style.display === "none" || section.style.display === "") {
+      section.style.display = "block";
+      document.getElementById('toggle-button').style.color = "#333";  // 버튼 글자 보이게
+    } else {
+      section.style.display = "none";
+      document.getElementById('toggle-button').style.color = "#f5f5f5";  // 버튼 글자 숨기기
     }
+  }
   </script>
   
 </head>
@@ -106,16 +112,21 @@
     <li><a href="https://blog.naver.com/b-pel" target="_blank"><i class="fa-solid fa-pen-nib icon"></i> 무로그</a></li>
   </ul>
 
-  <h2>📌 유유 
-    <button onclick="toggleSection('yuyu-section')">👁 보기/숨기기</button>
-  </h2>
-  <ul id="yuyu-section" style="display: none;">
-    <li><a href="https://www.kgirls.net/" target="_blank"><i class="fa-solid fa-image icon"></i> K-girls</a></li>
-    <li><a href="https://kemono.su/" target="_blank"><i class="fa-solid fa-paw icon"></i> Kemono</a></li>
-    <li><a href="https://eromangarev.blog/time-stop-brave21" target="_blank"><i class="fa-solid fa-clock icon"></i> 시간정지용사 무삭</a></li>
-    <li><a href="https://chyoa.com/chapter/Work-her-over.429522" target="_blank"><i class="fa-solid fa-book-open icon"></i> CHYOA</a></li>
-    <li><a href="https://hotssul.com/" target="_blank"><i class="fa-solid fa-fire icon"></i> 핫썰</a></li>
-  </ul>
+  <div id="yuyu-wrapper">
+    <h2>📌 유유</h2>
+    <ul>
+      <li><a href="https://www.kgirls.net/" target="_blank"><i class="fa-solid fa-image icon"></i> K-girls</a></li>
+      <li><a href="https://kemono.su/" target="_blank"><i class="fa-solid fa-paw icon"></i> Kemono</a></li>
+      <li><a href="https://eromangarev.blog/time-stop-brave21" target="_blank"><i class="fa-solid fa-clock icon"></i> 시간정지용사 무삭</a></li>
+      <li><a href="https://chyoa.com/chapter/Work-her-over.429522" target="_blank"><i class="fa-solid fa-book-open icon"></i> CHYOA</a></li>
+      <li><a href="https://hotssul.com/" target="_blank"><i class="fa-solid fa-fire icon"></i> 핫썰</a></li>
+    </ul>
+  </div>
+  
+  <!-- 버튼을 맨 아래로 내리고 글자색을 배경색과 동일하게 -->
+  <button onclick="toggleSection('yuyu-wrapper')" id="toggle-button" style="color:#f5f5f5; background:none; border:none; cursor:pointer; width:100%; padding:10px 0;">
+    👁 유유 섹션 보기/숨기기
+  </button>
   
   </ul>
 
