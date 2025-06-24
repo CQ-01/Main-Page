@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>📎 나만의 링크 모음</title>
+
+  <!-- Font Awesome CDN for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f5f5f5;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    h2 {
+      color: #2c3e50;
+      margin-top: 30px;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #0077cc;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+      color: #004a99;
+    }
+
+    .icon {
+      width: 20px;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 600px) {
+      body {
+        padding: 15px;
+        font-size: 0.95rem;
+      }
+      a {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+  <script>
+    function toggleSection(id) {
+      const section = document.getElementById(id);
+      section.style.display = (section.style.display === "none") ? "block" : "none";
+    }
+  </script>
+  
+</head>
+<body>
+
+  <h2>📌 자주 쓰는 사이트</h2>
+  <ul>
+    <li><a href="https://www.naver.com" target="_blank"><i class="fa-solid fa-house icon"></i> Naver</a></li>
+  </ul>
+
+  <h2>📌 생산성</h2>
+  <ul>
+    <li><a href="https://www.notion.so/" target="_blank"><i class="fa-solid fa-lightbulb icon"></i> Notion</a></li>
+    <li><a href="https://docs.google.com/spreadsheets/" target="_blank"><i class="fa-solid fa-table icon"></i> 스프레드시트</a></li>
+    <li><a href="https://mail.naver.com/" target="_blank"><i class="fa-solid fa-envelope icon"></i> 네이버 메일</a></li>
+  </ul>
+
+  <h2>📌 커리어</h2>
+  <ul>
+    <li><a href="https://www.catch.co.kr/" target="_blank"><i class="fa-solid fa-briefcase icon"></i> CATCH</a></li>
+    <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin icon"></i> LinkedIn</a></li>
+    <li><a href="https://www.yakup.com/" target="_blank"><i class="fa-solid fa-pills icon"></i> 약업신문</a></li>
+    <li><a href="https://github.com/" target="_blank"><i class="fa-solid fa-pills icon"></i> Git_hub</a></li>
+  </ul>
+
+  <h2>📌 AI Tool</h2>
+  <ul>
+    <li><a href="https://chat.openai.com" target="_blank"><i class="fa-brands fa-openai icon"></i> ChatGPT</a></li>
+    <li><a href="https://x.ai/grok" target="_blank"><i class="fa-solid fa-robot icon"></i> xAI 그록</a></li>
+    <li><a href="https://suno.com/" target="_blank"><i class="fa-solid fa-music icon"></i> AI 음악</a></li>
+  </ul>
+
+  <h2>📌 SNS</h2>
+  <ul>
+    <li><a href="https://www.threads.com/?hl=ko" target="_blank"><i class="fa-brands fa-instagram icon"></i> Threads</a></li>
+    <li><a href="https://www.pixiv.net/?lang=ko" target="_blank"><i class="fa-solid fa-palette icon"></i> Pixiv</a></li>
+    <li><a href="https://blog.naver.com/b-pel" target="_blank"><i class="fa-solid fa-pen-nib icon"></i> 무로그</a></li>
+  </ul>
+
+  <h2>📌 유유 
+    <button onclick="toggleSection('yuyu-section')">👁 보기/숨기기</button>
+  </h2>
+  <ul id="yuyu-section" style="display: none;">
+    <li><a href="https://www.kgirls.net/" target="_blank"><i class="fa-solid fa-image icon"></i> K-girls</a></li>
+    <li><a href="https://kemono.su/" target="_blank"><i class="fa-solid fa-paw icon"></i> Kemono</a></li>
+    <li><a href="https://eromangarev.blog/time-stop-brave21" target="_blank"><i class="fa-solid fa-clock icon"></i> 시간정지용사 무삭</a></li>
+    <li><a href="https://chyoa.com/chapter/Work-her-over.429522" target="_blank"><i class="fa-solid fa-book-open icon"></i> CHYOA</a></li>
+    <li><a href="https://hotssul.com/" target="_blank"><i class="fa-solid fa-fire icon"></i> 핫썰</a></li>
+  </ul>
+  
+  </ul>
+
+  <h2>📌 쇼핑</h2>
+  <ul>
+    <li><a href="https://www.aladin.co.kr/" target="_blank"><i class="fa-solid fa-book icon"></i> 알라딘</a></li>
+    <li><a href="http://www.goknife.co.kr/main.html" target="_blank"><i class="fa-solid fa-utensils icon"></i> 고나이프</a></li>
+    <li><a href="https://www.bestpen.kr/" target="_blank"><i class="fa-solid fa-pen icon"></i> 베스트펜</a></li>
+    <li><a href="https://www.marpple.com/kr" target="_blank"><i class="fa-solid fa-shirt icon"></i> 마플</a></li>
+    <li><a href="https://shopping.naver.com/ns/home" target="_blank"><i class="fa-solid fa-cart-shopping icon"></i> 네이버 쇼핑</a></li>
+  </ul>
+
+  <h2>📌 놀러가기</h2>
+  <ul>
+    <li><a href="https://www.popply.co.kr/" target="_blank"><i class="fa-solid fa-calendar-days icon"></i> 팝플리</a></li>
+    <li><a href="https://korean.visitkorea.or.kr/kfes/list/wntyFstvlList.do" target="_blank"><i class="fa-solid fa-map-location-dot icon"></i> 전국축제</a></li>
+    <li><a href="https://www.coex.co.kr/" target="_blank"><i class="fa-solid fa-building icon"></i> 코엑스</a></li>
+  </ul>
+
+  <h2>📌 컨텐츠</h2>
+  <ul>
+    <li><a href="https://kr.linkkf.net/" target="_blank"><i class="fa-solid fa-film icon"></i> Linkkf</a></li>
+    <li><a href="https://manatoki468.net/" target="_blank"><i class="fa-solid fa-book-open-reader icon"></i> 마나토끼</a></li>
+    <li><a href="https://www.netflix.com/kr/" target="_blank"><i class="fa-brands fa-netflix icon"></i> Netflix</a></li>
+    <li><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube icon"></i> YouTube</a></li>
+  </ul>
+
+  <h2>📌 운세</h2>
+  <ul>
+    <li><a href="https://shinhanlife.sinbiun.com/" target="_blank"><i class="fa-solid fa-star icon"></i> 신한 운세</a></li>
+  </ul>
+
+  <h2>📌 교육</h2>
+  <ul>
+    <li><a href="https://class101.net/" target="_blank"><i class="fa-solid fa-chalkboard-user icon"></i> 클래스 101</a></li>
+    <li><a href="https://classe.ebs.co.kr/" target="_blank"><i class="fa-solid fa-graduation-cap icon"></i> Class E</a></li>
+  </ul>
+
+  <h2>📌 괴담</h2>
+  <ul>
+    <li><a href="https://secret-n.tistory.com/347" target="_blank"><i class="fa-solid fa-ghost icon"></i> 대나무 숲에서</a></li>
+    <li><a href="https://vkepitaph.tistory.com/" target="_blank"><i class="fa-solid fa-skull-crossbones icon"></i> 2CH 괴담번역</a></li>
+  </ul>
+
+  <h2>📌 생존</h2>
+  <ul>
+    <li><a href="https://m.blog.naver.com/PostList.naver?blogId=kjongdo&tab=1" target="_blank"><i class="fa-solid fa-tree icon"></i> 서바이벌 & 부시크래프트</a></li>
+  </ul>
+
+</body>
+</html>
