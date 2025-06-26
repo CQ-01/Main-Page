@@ -8,173 +8,277 @@
   <!-- Font Awesome CDN for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
+
   <style>
-    body {
-      font-family: 'Arial', sans-serif;
-      background-color: #f5f5f5;
-      margin: 0;
+    .card-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+      justify-content: flex-start;
+    }
+  
+    .card {
+      width: 100px;   /* 원하는 고정 너비 */
+      height: 100px;  /* 필요한 경우 높이도 고정 */
+
+      background-color: #fff;
       padding: 20px;
-      color: #333;
-    }
-
-    h2 {
-      color: #2c3e50;
-      margin-top: 30px;
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 5px;
-    }
-
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-
-    li {
-      margin: 10px 0;
-    }
-
-    a {
-      text-decoration: none;
-      color: #0077cc;
-      font-size: 1rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    a:hover {
-      text-decoration: underline;
-      color: #004a99;
-    }
-
-    .icon {
-      width: 20px;
       text-align: center;
+      text-decoration: none;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      color: #333;
+      transition: transform 0.2s, box-shadow 0.2s;
+  
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      flex: 0 0 auto; /* 콘텐츠 크기만큼 너비 유지 */
     }
+  
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+  
+    .card .icon {
+      width: 200px;            /* 고정 너비 */
+      height: 160px;           /* 고정 높이 */
+      font-size: 2rem;        /* 아이콘 내부 크기 */
+      color: #2cacd3;
+      margin-bottom: 10px;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .card span {
+      font-size: 0.95rem;
+      margin-top: 5px;
+      white-space: nowrap;
+    }
+  
     @media screen and (max-width: 600px) {
-      body {
+      .card {
         padding: 15px;
-        font-size: 0.95rem;
       }
-      a {
-        font-size: 0.95rem;
+  
+      .card .icon {
+        font-size: 1.5rem;
       }
     }
   </style>
-  <script>
-  function toggleSection(id) {
-    const section = document.getElementById(id);
-    if (section.style.display === "none" || section.style.display === "") {
-      section.style.display = "block";
-      document.getElementById('toggle-button').style.color = "#333";  // 버튼 글자 보이게
-    } else {
-      section.style.display = "none";
-      document.getElementById('toggle-button').style.color = "#f5f5f5";  // 버튼 글자 숨기기
-    }
-  }
-  </script>
+  
   
 </head>
 <body>
 
-  <h2>📌 자주 쓰는 사이트</h2>
-  <ul>
-    <li><a href="https://www.naver.com" target="_blank"><i class="fa-solid fa-house icon"></i> Naver</a></li>
-  </ul>
-
   <h2>📌 생산성</h2>
-  <ul>
-    <li><a href="https://www.notion.so/" target="_blank"><i class="fa-solid fa-lightbulb icon"></i> Notion</a></li>
-    <li><a href="https://docs.google.com/spreadsheets/" target="_blank"><i class="fa-solid fa-table icon"></i> 스프레드시트</a></li>
-    <li><a href="https://mail.naver.com/" target="_blank"><i class="fa-solid fa-envelope icon"></i> 네이버 메일</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://www.notion.so/" target="_blank" class="card">
+      <i class="fa-solid fa-lightbulb fa-2x icon"></i>
+      <span>Notion</span>
+    </a>
+    <a href="https://docs.google.com/spreadsheets/" target="_blank" class="card">
+      <i class="fa-solid fa-table fa-2x icon"></i>
+      <span>스프레드시트</span>
+    </a>
+    <a href="https://mail.naver.com/" target="_blank" class="card">
+      <i class="fa-solid fa-envelope fa-2x icon"></i>
+      <span>네이버 메일</span>
+    </a>
+  </div>
 
   <h2>📌 커리어</h2>
-  <ul>
-    <li><a href="https://www.catch.co.kr/" target="_blank"><i class="fa-solid fa-briefcase icon"></i> CATCH</a></li>
-    <li><a href="https://www.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin icon"></i> LinkedIn</a></li>
-    <li><a href="https://www.yakup.com/" target="_blank"><i class="fa-solid fa-pills icon"></i> 약업신문</a></li>
-    <li><a href="https://github.com/" target="_blank"><i class="fa-solid fa-pills icon"></i> Git_hub</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://www.catch.co.kr/" target="_blank" class="card">
+      <i class="fa-solid fa-briefcase fa-2x icon"></i>
+      <span>CATCH</span>
+    </a>
+    <a href="https://www.linkedin.com/" target="_blank" class="card">
+      <i class="fa-solid fa-user-tie fa-2x icon"></i>
+      <span>Linked In</span>
+    </a>
+    <a href="https://www.yakup.com/" target="_blank" class="card">
+      <i class="fa-solid fa-capsules fa-2x icon"></i>
+      <span>약업신문</span>
+    </a>
+    <a href="https://github.com/" target="_blank" class="card">
+      <i class="fa-solid fa-code fa-2x icon"></i>
+      <span>Git_Hub</span>
+    </a>
+  </div>
 
   <h2>📌 AI Tool</h2>
-  <ul>
-    <li><a href="https://chat.openai.com" target="_blank"><i class="fa-brands fa-openai icon"></i> ChatGPT</a></li>
-    <li><a href="https://x.ai/grok" target="_blank"><i class="fa-solid fa-robot icon"></i> xAI 그록</a></li>
-    <li><a href="https://suno.com/" target="_blank"><i class="fa-solid fa-music icon"></i> AI 음악</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://chat.openai.com" target="_blank" class="card">
+      <i class="fa-solid fa-robot fa-2x icon"></i>
+      <span>ChatGPT</span>
+    </a>
+    <a href="https://x.ai/grok" target="_blank" class="card">
+      <i class="fa-solid fa-brain fa-2x icon"></i>
+      <span>xAI 그록</span>
+    </a>
+    <a href="https://suno.com/" target="_blank" class="card">
+      <i class="fa-solid fa-music fa-2x icon"></i>
+      <span>AI 음악</span>
+    </a>
+  </div>
 
   <h2>📌 SNS</h2>
-  <ul>
-    <li><a href="https://www.threads.com/?hl=ko" target="_blank"><i class="fa-brands fa-instagram icon"></i> Threads</a></li>
-    <li><a href="https://www.pixiv.net/?lang=ko" target="_blank"><i class="fa-solid fa-palette icon"></i> Pixiv</a></li>
-    <li><a href="https://blog.naver.com/b-pel" target="_blank"><i class="fa-solid fa-pen-nib icon"></i> 무로그</a></li>
-  </ul>
-
-  <div id="yuyu-wrapper">
-    <h2>📌 유유</h2>
-    <ul>
-      <li><a href="https://www.kgirls.net/" target="_blank"><i class="fa-solid fa-image icon"></i> K-girls</a></li>
-      <li><a href="https://kemono.su/" target="_blank"><i class="fa-solid fa-paw icon"></i> Kemono</a></li>
-      <li><a href="https://eromangarev.blog/time-stop-brave21" target="_blank"><i class="fa-solid fa-clock icon"></i> 시간정지용사 무삭</a></li>
-      <li><a href="https://chyoa.com/chapter/Work-her-over.429522" target="_blank"><i class="fa-solid fa-book-open icon"></i> CHYOA</a></li>
-      <li><a href="https://hotssul.com/" target="_blank"><i class="fa-solid fa-fire icon"></i> 핫썰</a></li>
-    </ul>
+  <div class="card-grid">
+    <a href="https://www.threads.com/?hl=ko" target="_blank" class="card">
+      <i class="fa-solid fa-comments fa-2x icon"></i>
+      <span>Threads</span>
+    </a>
+    <a href="https://www.pixiv.net/?lang=ko" target="_blank" class="card">
+      <i class="fa-solid fa-image fa-2x icon"></i>
+      <span>Pixiv</span>
+    </a>
+    <a href="https://blog.naver.com/b-pel" target="_blank" class="card">
+      <i class="fa-solid fa-blog fa-2x icon"></i>
+      <span>무로그</span>
+    </a>
   </div>
-  
-  <!-- 버튼을 맨 아래로 내리고 글자색을 배경색과 동일하게 -->
-  <button onclick="toggleSection('yuyu-wrapper')" id="toggle-button" style="color:#f5f5f5; background:none; border:none; cursor:pointer; width:100%; padding:10px 0;">
-    👁 유유 섹션 보기/숨기기
-  </button>
-  
-  </ul>
+
+  <h2>📌 유</h2>
+  <div class="card-grid">
+    <a href="https://kemono.su/" target="_blank" class="card">
+      <i class="fa-solid fa-mask fa-2x icon"></i>
+      <span>Kemono</span>
+    </a>
+    <a href="https://eromangarev.blog/time-stop-brave21" target="_blank" class="card">
+      <i class="fa-solid fa-clock fa-2x icon"></i>
+      <span>시간정지용사 무삭</span>
+    </a>
+    <a href="https://chyoa.com/chapter/Work-her-over.429522" target="_blank" class="card">
+      <i class="fa-solid fa-book-open fa-2x icon"></i>
+      <span>CHYOA</span>
+    </a>
+    <a href="https://hotssul.com/" target="_blank" class="card">
+      <i class="fa-solid fa-fire fa-2x icon"></i>
+      <span>핫썰</span>
+    </a>
+  </div>
 
   <h2>📌 쇼핑</h2>
-  <ul>
-    <li><a href="https://www.aladin.co.kr/" target="_blank"><i class="fa-solid fa-book icon"></i> 알라딘</a></li>
-    <li><a href="http://www.goknife.co.kr/main.html" target="_blank"><i class="fa-solid fa-utensils icon"></i> 고나이프</a></li>
-    <li><a href="https://www.bestpen.kr/" target="_blank"><i class="fa-solid fa-pen icon"></i> 베스트펜</a></li>
-    <li><a href="https://www.marpple.com/kr" target="_blank"><i class="fa-solid fa-shirt icon"></i> 마플</a></li>
-    <li><a href="https://shopping.naver.com/ns/home" target="_blank"><i class="fa-solid fa-cart-shopping icon"></i> 네이버 쇼핑</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://www.aladin.co.kr/" target="_blank" class="card">
+      <i class="fa-solid fa-book fa-2x icon"></i>
+      <span>알라딘</span>
+    </a>
+    <a href="http://www.goknife.co.kr/main.html" target="_blank" class="card">
+      <i class="fa-solid fa-utensils fa-2x icon"></i>
+      <span>고나이프</span>
+    </a>
+    <a href="https://www.bestpen.kr/" target="_blank" class="card">
+      <i class="fa-solid fa-pen-nib fa-2x icon"></i>
+      <span>베스트펜</span>
+    </a>
+    <a href="https://www.marpple.com/kr" target="_blank" class="card">
+      <i class="fa-solid fa-shirt fa-2x icon"></i>
+      <span>마플</span>
+    </a>
+    <a href="https://shopping.naver.com/ns/home" target="_blank" class="card">
+      <i class="fa-solid fa-cart-shopping fa-2x icon"></i>
+      <span>네이버 쇼핑</span>
+    </a>
+    <a href="https://www.pokemonstore.co.kr/" target="_blank" class="card">
+      <i class="fa-solid fa-gamepad fa-2x icon"></i>
+      <span>포켓몬 스토어</span>
+    </a>
+
+
+  </div>
 
   <h2>📌 놀러가기</h2>
-  <ul>
-    <li><a href="https://www.popply.co.kr/" target="_blank"><i class="fa-solid fa-calendar-days icon"></i> 팝플리</a></li>
-    <li><a href="https://korean.visitkorea.or.kr/kfes/list/wntyFstvlList.do" target="_blank"><i class="fa-solid fa-map-location-dot icon"></i> 전국축제</a></li>
-    <li><a href="https://www.coex.co.kr/" target="_blank"><i class="fa-solid fa-building icon"></i> 코엑스</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://www.popply.co.kr/" target="_blank" class="card">
+      <i class="fa-solid fa-ticket fa-2x icon"></i>
+      <span>팝플리</span>
+    </a>
+    <a href="https://korean.visitkorea.or.kr/kfes/list/wntyFstvlList.do" target="_blank" class="card">
+      <i class="fa-solid fa-calendar-days fa-2x icon"></i>
+      <span>전국축제</span>
+    </a>
+    <a href="https://www.coex.co.kr/" target="_blank" class="card">
+      <i class="fa-solid fa-building fa-2x icon"></i>
+      <span>코엑스</span>
+    </a>
+  </div>
 
   <h2>📌 컨텐츠</h2>
-  <ul>
-    <li><a href="https://kr.linkkf.net/" target="_blank"><i class="fa-solid fa-film icon"></i> Linkkf</a></li>
-    <li><a href="https://manatoki468.net/" target="_blank"><i class="fa-solid fa-book-open-reader icon"></i> 마나토끼</a></li>
-    <li><a href="https://www.netflix.com/kr/" target="_blank"><i class="fa-brands fa-netflix icon"></i> Netflix</a></li>
-    <li><a href="https://www.youtube.com" target="_blank"><i class="fa-brands fa-youtube icon"></i> YouTube</a></li>
-  </ul>
-
-  <h2>📌 운세</h2>
-  <ul>
-    <li><a href="https://shinhanlife.sinbiun.com/" target="_blank"><i class="fa-solid fa-star icon"></i> 신한 운세</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://kr.linkkf.net/" target="_blank" class="card">
+      <i class="fa-solid fa-film fa-2x icon"></i>
+      <span>Linkkf</span>
+    </a>
+    <a href="https://manatoki468.net/" target="_blank" class="card">
+      <i class="fa-solid fa-book-journal-whills fa-2x icon"></i>
+      <span>마나토끼</span>
+    </a>
+    <a href="https://www.netflix.com/kr/" target="_blank" class="card">
+      <i class="fa-solid fa-tv fa-2x icon"></i>
+      <span>넷플릭스</span>
+    </a>
+    </a>
+    <a href="https://www.youtube.com" target="_blank" class="card">
+      <i class="fa-solid fa-video fa-2x icon"></i>
+      <span>유튜브</span>
+    </a>
+  </div>
 
   <h2>📌 교육</h2>
-  <ul>
-    <li><a href="https://class101.net/" target="_blank"><i class="fa-solid fa-chalkboard-user icon"></i> 클래스 101</a></li>
-    <li><a href="https://classe.ebs.co.kr/" target="_blank"><i class="fa-solid fa-graduation-cap icon"></i> Class E</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://class101.net/" target="_blank" class="card">
+      <i class="fa-solid fa-chalkboard-user fa-2x icon"></i>
+      <span>클래스101</span>
+    </a>
+    <a href="https://classe.ebs.co.kr/" target="_blank" class="card">
+      <i class="fa-solid fa-graduation-cap fa-2x icon"></i>
+      <span>클래스 E</span>
+    </a>
+  </div>
 
   <h2>📌 괴담</h2>
-  <ul>
-    <li><a href="https://secret-n.tistory.com/347" target="_blank"><i class="fa-solid fa-ghost icon"></i> 대나무 숲에서</a></li>
-    <li><a href="https://vkepitaph.tistory.com/" target="_blank"><i class="fa-solid fa-skull-crossbones icon"></i> 2CH 괴담번역</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://secret-n.tistory.com/347" target="_blank" class="card">
+      <i class="fa-solid fa-ghost fa-2x icon"></i>
+      <span>대나무 숲에서</span>
+    </a>
+    <a href="https://vkepitaph.tistory.com/" target="_blank" class="card">
+      <i class="fa-solid fa-skull fa-2x icon"></i>
+      <span>2CH 괴담번역</span>
+    </a>
+
+  </div>
 
   <h2>📌 생존</h2>
-  <ul>
-    <li><a href="https://m.blog.naver.com/PostList.naver?blogId=kjongdo&tab=1" target="_blank"><i class="fa-solid fa-tree icon"></i> 서바이벌 & 부시크래프트</a></li>
-  </ul>
+  <div class="card-grid">
+    <a href="https://m.blog.naver.com/PostList.naver?blogId=kjongdo&tab=1" target="_blank" class="card">
+      <i class="fa-solid fa-tree fa-2x icon"></i>
+      <span>부시크래프트</span>
+    </a>
+    <a href="https://m.dcinside.com/board/dcbest/145916" target="_blank" class="card">
+      <i class="fa-solid fa-person-hiking fa-2x icon"></i>
+      <span>보스니아 생존기</span>
+    </a>
+  </div>
+
+  <h2>📌 기타</h2>
+  <div class="card-grid">
+    <a href="https://shinhanlife.sinbiun.com/" target="_blank" class="card">
+      <i class="fa-solid fa-star fa-2x icon"></i>
+      <span>신한 운세</span>
+    </a>
+    <a href="https://hometax.go.kr/websquare/websquare.html?w2xPath=/ui/pp/index_pp.xml&menuCd=index3" target="_blank" class="card">
+      <i class="fa-solid fa-file-invoice-dollar fa-2x icon"></i>
+      <span>홈택스</span>
+    </a>
+  </div>
 
 </body>
 </html>
